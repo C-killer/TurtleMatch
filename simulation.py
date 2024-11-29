@@ -29,13 +29,12 @@ def simulate(init_turtles) -> int :
         x = random.choice(color_range).value  # 动态选择颜色
         if x == color_wanted:       # 若为期望颜色，则加拆一包
             waiting_list += 1
+        if table[x] > 0:              # 若能对对碰，加拆一包并移走放入口袋
+            waiting_list += 1
+            table[x] -= 1
+            nb_total += 2
         else :
-            if table[x] > 0:              # 若能对对碰，加拆一包并移走放入口袋
-                waiting_list += 1
-                table[x] -= 1
-                nb_total += 2
-            else :
-                table[x] += 1
+            table[x] += 1
         waiting_list -= 1
     nb_total += len(table)          # 将桌上剩余海龟收入囊中
     return nb_total
