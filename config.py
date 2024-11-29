@@ -55,7 +55,7 @@ class Config:
     """
     def __init__(self):
         self.num_simulations = 100000     # 模拟试验次数
-        self.init_turtles = 20          # 初始的海龟数量
+        self.init_turtles = 50          # 初始的海龟数量
         self.colors = TurtleColor
 
 config = Config()
