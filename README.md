@@ -36,6 +36,7 @@ pip install matplotlib numpy seaborn
 
 1. 在项目目录中执行`main.py`以运行模拟。
 2. 模拟的结果将以多种图形化方式输出，便于分析模拟数据。
+注意： 应该使init_turtles大于颜色的数量10，使其颜色均匀分布
 
 ## 配置
 
